@@ -10,6 +10,10 @@ class CloudinaryUploader < CarrierWave::Uploader::Base
   def paperclip_path
     "assets/products/:id/:style/:basename.:extension"
   end
+  
+  def styles
+    Hash.new
+  end
 
   # These are the versions defined in Spree::Image
   version :mini do
